@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE teiCorpus SYSTEM "tei_all.dtd">
+<?xml-stylesheet type="text/xsl" href="style.xsl"?>
+<?xml-stylesheet type="text/css" href="stile.css"?>
+
+<teiCorpus version="3.3.0" xmlns="http://www.tei-c.org/ns/1.0">
+    <!-- HEADER DEL CORPUS -->
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Trascrizione e codifica di Cartoline</title>
+                <respStmt>
+                    <resp>A cura di:</resp>
+                    <name type="person" xml:id="MF">Michele Fatticcioni (matr. 580267)</name>
+                    <name type="person" xml:id="CA">Christian Attanasio (matr. 578487)</name>
+                </respStmt>
+
+                <!-- ENTE DI APPARTENENZA -->
+                <respStmt>
+                    <resp>Ente di Appartenenza</resp>
+                    <name type="comune" xml:id="SP">Comune della Spezia</name>
+                </respStmt>
+            </titleStmt>
+
+            <editionStmt>
+                <edition>Studenti di Storia Pubblica Digitale, Corso di Laurea Magistrale e
+                    Triennale di Informatica Umanistica, Università di Pisa
+                    <date when="2021-06">Giugno 2021</date>
+                </edition>
+                <respStmt>
+                    <resp>Encoding by:</resp>
+                    <name ref="MF"/>
+                    <name ref="CA"/>
+                </respStmt>
+                <respStmt>
+                    <resp>Compilatore:</resp>
+                    <name xml:id="TC">Tommaso Castagneto</name>
+                </respStmt>
+                <respStmt>
+                    <resp>Responsabile scientifico:</resp>
+                    <name xml:id="GP">G. Paolicchi</name>
+                    <name xml:id="ES">E. Salvatori</name>
+                </respStmt>
+                <respStmt>
+                    <resp>Funzionario responsabile:</resp>
+                    <name xml:id="ER">E. Ratti</name>
+                </respStmt>
+            </editionStmt>
+
+            <publicationStmt>
+                <publisher>Unipi</publisher>
+                <pubPlace>Pisa</pubPlace>
+                <availability status="restricted">
+                    <p>Available under licence only</p>
+                </availability>
+                <date when="2019">2019</date>
+                <distributor>LabCD</distributor>
+                <address>
+                    <addrLine>Laboratorio di Cultura Digitale - Università di Pisa</addrLine>
+                    <placeName>Pisa</placeName>
+                </address>
+            </publicationStmt>
+
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Italy</country>
+                        <settlement type="città">La Spezia</settlement>
+                        <repository>Museo Civico Etnografico "Giovanni Podenzana", Sezione dei
+                            cimeli garibaldini e della Prima Guerra Mondiale</repository>
+                    </msIdentifier>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+ 
+    <!-- HEADER DELLA CARTOLINA 7694-180 -->
+    <TEI xmlns="http://www.tei-c.org/ns/1.0">
+        <teiHeader>
+            <fileDesc>
+                <titleStmt>
+                    <title>[Uomo alla scrivania]</title>
+
+                    <respStmt>
+                        <resp>Encoding by:</resp>
+                        <name ref="MF"/>
+                        <name ref="CA"/>
+                    </respStmt>
+
+                    <respStmt>
+                        <resp>Ente di Appartenenza:</resp>
+                        <name type="comune" ref="SP">Comune della Spezia</name>
+                    </respStmt>
+                </titleStmt>
+
+                <editionStmt>
+                    <edition>Studenti di Storia Pubblica Digitale, Corso di Laurea Magistrale e
+                        Triennale di Informatica Umanistica, Università di Pisa 
+                        <date when="2021-06">giugno 2021</date>
+                    </edition>
+                    <respStmt>
+                        <resp>Encoding by:</resp>
+                        <name ref="MF"/>
+                        <name ref="CA"/>
+                    </respStmt>
+                    <respStmt>
+                        <resp>Compilatore:</resp>
+                        <name ref="TC">Tommaso Castagneto</name>
+                    </respStmt>
+                    <respStmt>
+                        <resp>Responsabile scientifico:</resp>
+                        <name ref="GP">G. Paolicchi</name>
+                        <name ref="ES">E. Salvatori</name>
+                    </respStmt>
+                    <respStmt>
+                        <resp>Funzionario responsabile</resp>
+                        <name ref="ER">E. Ratti</name>
+                    </respStmt>
+                </editionStmt>
+
+                <publicationStmt>
+                    <publisher>Unipi</publisher>
+                    <pubPlace>Pisa</pubPlace>
+                    <availability>
+                        <p>Available under licence only</p>
+                    </availability>
+                    <date when="2019">2019</date>
+                    <distributor>LabCD</distributor>
+                    <address>
+                        <addrLine>Laboratorio di Cultura Digitale - Università di Pisa</addrLine>
+                        <placeName>Pisa</placeName>
+                    </address>
+                </publicationStmt>
+
+                <sourceDesc>
+                    <bibl>
+                        <title>[Uomo alla scrivania]</title>
+                    </bibl>
+                    <msDesc>
+                        <msIdentifier>
+                            <country>Italia</country>
+                            <settlement>La Spezia (SP)</settlement>
+                            <repository>Museo Civico Etnografico "Giovanni Podenzana", Sezione dei
+                                cimeli garibaldini e della Prima Guerrra Mondiale</repository>
+                            <idno>7694-180_001/002</idno>
+                        </msIdentifier>
+
+                        <msContents>
+                            <summary>Cartolina Artistica</summary>
+                            <textLang>Italiano</textLang>
+                        </msContents>
+                        <physDesc>
+                            <objectDesc>
+                                <supportDesc>
+                                    <support>
+                                        <objectType>Cartolina</objectType>
+                                        <material>Carta</material>
+                                        <dimensions unit="cm">
+                                            <width>14</width>
+                                            <height>9</height>
+                                        </dimensions>
+                                    </support>
+                                    <condition>Buono</condition>
+                                </supportDesc>
+                            </objectDesc>
+                            <handDesc>
+                                <handNote>
+                                    <p>Nel lato posteriere sono presenti delle scritte, in corsivo, fatte da "Giovannino"</p>
+                                </handNote>
+                                <handNote>
+                                    <p>Nel lato posteriore è presente il numero "180" che indica il numero di inventario, il numero di inventario è stato aggiunto pustumo</p>
+                                </handNote>
+                            </handDesc>
+                        </physDesc>
+                    </msDesc>
+
+                    <listPerson>
+                        <person xml:id="Giovanni">
+                            <persName>
+                                <forename>Giovanni</forename>
+                            </persName>
+                            <sex>M</sex>
+                        </person>
+                        <person xml:id="OT">
+                            <persName>
+                                <forename>Oliva</forename>
+                                <surname>Turtura</surname>
+                            </persName>
+                            <sex>F</sex>
+                        </person>
+                    </listPerson>
+                </sourceDesc>
+            </fileDesc>
+            <profileDesc>
+                <correspDesc>
+                    <correspAction type="Inviata">
+                        <persName ref="Giovanni"/>
+                    </correspAction>
+                    <correspAction type="Ricevuta">
+                        <persName ref="OT"/>
+                    </correspAction>
+                </correspDesc>
+                <langUsage>
+                    <language ident="it-IT">Italiano del Novecento</language>
+                </langUsage>
+            </profileDesc>
+        </teiHeader>
+
+        <facsimile>
+            <!-- FRONTE cartolina 180 -->
+            <surfaceGrp>
+                <surface  type="fronte_cartolina">
+                    <graphic url="img/7694-180F.jpg"/>
+                </surface>
+                <!-- RETRO cartolina 180 -->
+                <surface>
+                    <graphic url="img/7694-180R.jpg"/>
+                </surface>
+            </surfaceGrp>
+        </facsimile>
+
+        <!--TESTO CARTOLINA-->
+        <text>
+            <body xml:lang="ita">
+                <div type="fronte">
+                    <figure>
+                        <figDesc>Nell'immagine della cartolina è possibile vedere un uomo vestito di rosso seduto alla sua scrivania che legge attentamente una lettera accompagnato dalla luce di una lampada ed un vaso di fiori.</figDesc>
+                    </figure>
+                </div>
+
+                <!--Retro-->
+                <div type="retro">
+                    <div type="contenuto_trascrizione">
+                        <!--CODIFICA SCRITTE NELLA CARTOLINA-->
+                        <opener>
+                            <dateline>Modena, 9/12-17</dateline>
+                        </opener>
+
+                        <ab type="blocco-destro">
+                            <address>
+                                <persName>
+                                    <roleName>Gent sig na</roleName>
+                                    <name>Oliva</name>
+                                    <surname>Turtura</surname>
+                                </persName>
+                                <addrLine>
+                                    Via Girolamo Rossi 58
+                                    <placeName>Ravenna</placeName>
+                                </addrLine>
+                            </address>
+                        </ab>
+                        <p>affettuosamente</p>
+                        <!-- CHIUSURA LETTERA -->
+                        <closer>
+                            <signed>
+                                Tuo
+                                <persName>Giovannino</persName>
+                            </signed>
+                        </closer>
+                    </div>
+                    <div type="stampe_cartolina">
+                        <ab>
+                            <s>
+                                Vistato dall'
+                                <orgName>
+                                    Ufficio Revisione Stampa di
+                                    <placeName>
+                                        Milano
+                                    </placeName>
+                                </orgName>
+                            </s>
+                            <s>N. 689</s>
+                            <s>900-5</s>
+                        </ab>
+                    </div>
+
+                    <div type="francobolli_timbri">
+                        <p>
+                            <stamp type="francobollo">
+                                <note type='descrizione'>Francobollo da 5 centesimi delle Poste Italiane con il cameo del profilo di Vittorio Emanuele III.</note>
+                                <note type='stato'>Il francobollo è parzialmente coperto dall'inchiostro del timbro.</note>
+                            </stamp>
+                            <stamp type="timbro">
+                                <mentioned>
+                                    <term>MOD</term><unclear reason="illegibile"/>
+                                    <term>FERRO</term><unclear reason="illegibile"/>
+                                </mentioned>
+                                <date><unclear reason="illegibile"/></date>
+                                <note>Il timbro è parzialmente leggibile in quanto è stato apposto oltre i bordi della cartolina.</note>
+                            </stamp>
+                        </p>
+                    </div>
+                </div>
+            </body>
+        </text>
+    </TEI>
+
+
+    <!-- HEADER DELLA SECONDA CARTOLINA -->
+    <TEI xmlns="http://www.tei-c.org/ns/1.0">
+           <teiHeader>
+            <fileDesc>
+                <titleStmt>
+                    <title type="titolo">[Donna che scrive una lettera]</title>
+
+                    <respStmt>
+                        <resp>Trascrizione a cura di:</resp>
+                        <name ref="MF"/>
+                        <name ref="CA"/>
+                    </respStmt>
+
+                    <respStmt>
+                        <resp>Ente di Appartenenza:</resp>
+                        <name type="comune" ref="SP">Comune della Spezia</name>
+                    </respStmt>
+                </titleStmt>
+
+                <editionStmt>
+                    <edition>Studenti di Storia Pubblica Digitale, Corso di Laurea Magistrale e
+                        Triennale di Informatica Umanistica, Università di Pisa
+                        <date when="2021-06">giugno 2021</date>
+                    </edition>
+                    <respStmt>
+                        <resp>Encoding by:</resp>
+                        <name ref="MF"/>
+                        <name ref="CA"/>
+                    </respStmt>
+                    <respStmt>
+                        <resp>Compilatore:</resp>
+                        <name ref="TC">Tommaso Castagneto</name>
+                    </respStmt>
+                    <respStmt>
+                        <resp>Responsabile scientifico:</resp>
+                        <name ref="GP">G. Paolicchi</name>
+                        <name ref="ES">E. Salvatori</name>
+                    </respStmt>
+                    <respStmt>
+                        <resp>Funzionario responsabile</resp>
+                        <name ref="ER">E. Ratti</name>
+                    </respStmt>
+                </editionStmt>
+
+                <publicationStmt>
+                    <publisher>Unipi</publisher>
+                    <pubPlace>Pisa</pubPlace>
+                    <availability>
+                        <p>Available under licence only</p>
+                    </availability>
+                    <date when="2019">2019</date>
+                    <distributor>LabCD</distributor>
+                    <address>
+                        <addrLine>Laboratorio di Cultura Digitale - Università di Pisa</addrLine>
+                        <placeName>Pisa</placeName>
+                    </address>
+                </publicationStmt>
+
+                <sourceDesc>
+                    <bibl>
+                        <title>[Donna che scrive una lettera]</title>
+                    </bibl>
+                    <msDesc>
+                        <msIdentifier>
+                            <country>Italia</country>
+                            <settlement>La Spezia (SP)</settlement>
+                            <repository>Museo Civico Etnografico "Giovanni Podenzana", Sezione dei
+                                cimeli garibaldini e della Prima Guerrra Mondiale</repository>
+                            <idno>7694-183_001/002</idno>
+                        </msIdentifier>
+
+                        <msContents>
+                            <summary>Cartolina Artistica</summary>
+                            <textLang>Italiano</textLang>
+                        </msContents>
+                        <physDesc>
+                            <objectDesc>
+                                <supportDesc>
+                                    <support>
+                                        <objectType>Cartolina</objectType>
+                                        <material>Carta</material>
+                                        <dimensions unit="cm">
+                                            <width>14</width>
+                                            <height>9</height>
+                                        </dimensions>
+                                    </support>
+                                    <condition>Buono</condition>
+                                </supportDesc>
+                            </objectDesc>
+                            <handDesc>
+                                <handNote>
+                                    <p>Nel lato posteriere sono presenti delle scritte, in corsivo, fatte da "Giovannino"</p>
+                                </handNote>
+                                <handNote>
+                                    <p>Nel lato posteriore è presente il numero "183" che indica il numero di inventario, il numero di inventario è stato aggiunto pustumo</p>
+                                </handNote>
+                            </handDesc>
+                        </physDesc>
+                    </msDesc>
+
+                    <listPerson>
+                        <person>
+                            <persName>
+                                <forename>Giovanni</forename>
+                            </persName>
+                            <sex>M</sex>
+                        </person>
+                        <person>
+                            <persName>
+                                <forename>Oliva</forename>
+                                <surname>Turtura</surname>
+                            </persName>
+                            <sex>F</sex>
+                        </person>
+                    </listPerson>
+                 </sourceDesc>
+            </fileDesc>
+            <profileDesc>
+                <correspDesc>
+                    <correspAction type="Inviata">
+                        <persName ref="Giovanni"/>
+                    </correspAction>
+                    <correspAction type="Ricevuta">
+                        <persName ref="OT"/>
+                    </correspAction>
+                </correspDesc>
+                <langUsage>
+                    <language ident="it-IT">Italiano del Novecento</language>
+                </langUsage>
+            </profileDesc>
+        </teiHeader>
+
+        <facsimile>
+            <surfaceGrp>
+                <surface type="fronte_cartolina">
+                    <graphic url="img/7694-183F.jpg"/>
+                </surface>
+                <surface xml:id="facsimile-cartolina-183r">
+                    <graphic url="img/7694-183R.jpg"/>
+                </surface>
+            </surfaceGrp>
+        </facsimile>
+
+        <!-- TESTO CARTOLINA -->
+        <text>
+            <body xml:lang="ita">
+                <div type="fronte">
+                    <figure>
+                        <figDesc>
+                            Una donna dai capelli rossi, illuminata dalla luce di una lampada da tavolo, è intenta a scrivere una lettera.
+                            Sullo sfondo si intravede un mazzo di fiori, mentre il resto dello sfondo sfuma in nero.
+                    </figDesc>
+                        <note>Nella parte centrale della cartolina è presente una macchia nera: propabilmente si tratta di una macchia di inchiostro. </note>
+                    </figure>
+                </div>
+
+                <div type="retro">
+                    <div type="contenuto_trascrizione">
+                        <pb/>
+                        <!-- CORPO DELLA LETTERA -->
+                        <opener>
+                            <dateline>Modena, 10/12-17</dateline>
+                        </opener>
+                        <ab type="blocco-destro">
+                            <address>
+                                <persName>
+                                    <roleName>Gent Sig na</roleName>
+                                    <name>Oliva</name>
+                                    <surname>Turtura</surname>
+                                </persName>
+                                <addrLine>Via Girolamo Rossi 58
+                                    <placeName>Ravenna</placeName>
+                                </addrLine>
+                            </address>
+                        </ab>
+                        <p>Tutto l'affetto e i miei pensieri.</p>
+                        <!-- CHIUSURA LETTERA -->
+                        <closer>
+                            <signed>
+                                    Tuo
+                                    <persName>Giovannino</persName>
+                            </signed>
+                        </closer>
+                    </div>
+                    <div type="stampe_cartolina">
+                        <ab>
+                            <s>Vistato dall'
+                                <orgName>Ufficio Revisione Stampa di
+                                    <placeName>Milano</placeName>
+                            </orgName>
+                            </s>
+                            <s>N. 68 -4</s>
+                            <s>900-4</s>
+                        </ab>
+                    </div>
+
+
+                    <div type="francobolli_timbri">
+                        <p>
+                            <stamp type="francobollo">
+                                <note>Francobollo da 5 centesimi delle Poste Italiane con il cameo del profilo di Vittorio Emanuele III.
+                                Il francobollo è per la maggior parte coperto dall'inchiostro del timbro.</note>
+                            </stamp>
+                            <stamp type="timbro">
+                                <mentioned>
+                                    <unclear reason="illegibile"/>
+                                </mentioned>
+                                <date><unclear reason="illegibile"/></date>
+                                <note>Il timbro è quasi totalmente illeggibile a causa di pesanti sbavature dell'inchiostro.</note>
+                            </stamp>
+                        </p>
+                    </div>
+
+                </div>
+            </body>
+        </text>
+    </TEI>
+
+    <!-- HEADER DELLA TERZA CARTOLINA -->
+    <TEI xmlns="http://www.tei-c.org/ns/1.0">
+        <teiHeader>
+            <fileDesc>
+                <titleStmt>
+                    <title>Angelo dall'oca bianca: Piazza delle erbe a Verona</title>
+                    <respStmt>
+                        <resp>Trascrizione a cura di:</resp>
+                        <name ref="MF"/>
+                        <name ref="CA"/>
+                    </respStmt>
+                    <respStmt>
+                        <resp>Ente di Appartenenza:</resp>
+                        <name type="comune" ref="SP">Comune della Spezia</name>
+                    </respStmt>
+                </titleStmt>
+                <editionStmt>
+                    <edition>Studenti di Storia Pubblica Digitale, Corso di Laurea Magistrale e
+                        Triennale di Informatica Umanistica, Università di Pisa
+                        <date when="2021-06">giugno 2021</date>
+                    </edition>
+                    <respStmt>
+                        <resp>Encoding by:</resp>
+                        <name ref="MF"/>
+                        <name ref="CA"/>
+                    </respStmt>
+                    <respStmt>
+                        <resp>Compilatore:</resp>
+                        <name ref="TC">Tommaso Castagneto</name>
+                    </respStmt>
+                    <respStmt>
+                        <resp>Responsabile scientifico:</resp>
+                        <name ref="GP">G. Paolicchi</name>
+                        <name ref="ES">E. Salvatori</name>
+                    </respStmt>
+                    <respStmt>
+                        <resp>Funzionario responsabile</resp>
+                        <name ref="ER">E. Ratti</name>
+                    </respStmt>
+                </editionStmt>
+                <publicationStmt>
+                    <publisher>Unipi</publisher>
+                    <pubPlace>Pisa</pubPlace>
+                    <availability>
+                        <p>Available under licence only</p>
+                    </availability>
+                    <date when="2019">2019</date>
+                    <distributor>LabCD</distributor>
+                    <address>
+                        <addrLine>Laboratorio di Cultura Digitale - Università di Pisa</addrLine>
+                        <placeName>Pisa</placeName>
+                    </address>
+                </publicationStmt>
+                <sourceDesc>
+                    <bibl>
+                        <title>Angelo dall'oca bianca: Piazza delle erbe a Verona</title>
+                        <publisher>Edizioni C. Schenone&amp;C.</publisher>
+                        <date>1917</date>
+                        <pubPlace>Verona</pubPlace>
+                    </bibl>
+                    <msDesc>
+                        <msIdentifier>
+                            <country>Italia</country>
+                            <settlement>La Spezia (SP)</settlement>
+                            <repository>Museo Civico Etnografico "Giovanni Podenzana", Sezione dei
+                                cimeli garibaldini e della Prima Guerrra Mondiale</repository>
+                            <idno>7694-192_001/002</idno>
+                        </msIdentifier>
+                        <msContents>
+                            <summary>Cartolina Artistica</summary>
+                            <textLang>Italiano</textLang>
+                        </msContents>
+                        <physDesc>
+                            <objectDesc>
+                                <supportDesc>
+                                    <support>
+                                        <objectType>Cartolina</objectType>
+                                        <material>Carta</material>
+                                        <dimensions unit="cm">
+                                            <width>14</width>
+                                            <height>9</height>
+                                        </dimensions>
+                                    </support>
+                                    <condition>Buono</condition>
+                                </supportDesc>
+                            </objectDesc>
+                            <handDesc>
+                                <handNote>
+                                    <p>Nel lato posteriere sono presenti delle scritte, in corsivo, fatte da "Giovannino"</p>
+                                </handNote>
+                                <handNote>
+                                    <p>Nel lato posteriore è presente il numero "192" che indica il numero di inventario, il numero di inventario è stato aggiunto pustumo</p>
+                                </handNote>
+                            </handDesc>
+                        </physDesc>
+                    </msDesc>
+                    <listPerson>
+                        <person>
+                            <persName>
+                                <forename>Giovanni</forename>
+                            </persName>
+                            <sex>M</sex>
+                        </person>
+                        <person>
+                            <persName>
+                                <forename>Oliva</forename>
+                                <surname>Turtura</surname>
+                            </persName>
+                            <sex>F</sex>
+                        </person>
+                        <person>
+                            <persName>
+                                <forename>C.</forename>
+                                <surname>Schenone</surname>
+                            </persName>
+                        </person>
+                    </listPerson>
+                </sourceDesc>
+            </fileDesc>
+            <profileDesc>
+                <correspDesc>
+                    <correspAction type="Inviata">
+                        <persName ref="Giovanni"/>
+                    </correspAction>
+                    <correspAction type="Ricevuta">
+                        <persName ref="OT"/>
+                    </correspAction>
+                </correspDesc>
+                <langUsage>
+                    <language ident="it-IT">Italiano del Novecento</language>
+                </langUsage>
+            </profileDesc>
+        </teiHeader>
+        <facsimile>
+            <surfaceGrp>
+                <surface type="fronte_cartolina">
+                    <graphic url="img/7694-192F.jpg" />
+                </surface>
+                <surface type="retro_cartolina">
+                    <graphic url="img/7694-192R.jpg"/>
+                </surface>
+            </surfaceGrp>
+        </facsimile>
+        <!-- TESTO CARTOLINA -->
+        <text>
+            <body xml:lang="ita">
+                <div type="fronte">
+                    <figure>
+                        <figDesc>Veduta di piazza delle erbe a Verona</figDesc>
+                        <note>Nella parte superiore della cartolina è presente una macchia bianca.</note>
+                    </figure>
+                    <head>
+                        <s>Angelo dall'oca bianca: Piazza delle erbe a Verona</s>
+                        <s>(<placeName>Venezia</placeName>, Galleria d'Arte Moderna).</s>
+                    </head>
+                </div>
+                <div type="retro">
+                    <div type="contenuto_trascrizione">
+                        <pb/>
+                        <!-- CORPO DELLA LETTERA -->
+                        <opener>
+                            <dateline>Modena, 30/6-1917</dateline>
+                        </opener>
+                        <ab type="blocco-destro">
+                            <address>
+                                <persName>
+                                    <roleName>Gent - - Sig -</roleName>
+                                    <name>Oliva</name>
+                                    <surname>Turtura</surname>
+                                </persName>
+                                <addrLine>
+                                    Via Girolamo Rossi 58
+                                    <placeName>Ravenna</placeName>
+                                </addrLine>
+                            </address>
+                        </ab>
+                        <p>Un dolce pensiero</p>
+                        <!-- CHIUSURA LETTERA -->
+                        <closer>
+                            <signed>
+                                Affetuosamente tuo
+                                <persName>Giovannino</persName>
+                            </signed>
+                        </closer>
+                    </div>
+                    <div type="stampe_cartolina">
+                        <ab>
+                            <s>Cartolina Postale</s>
+                            <s>Carte Postale</s>
+                            <s>Edizioni<orgName>E. Schenone&amp;C.</orgName></s>
+                            <s>
+                                <address>
+                                    <addrLine>Viale Magenta n.10
+                                        <placeName>Milano</placeName>
+                                    </addrLine>
+                                </address>
+                            </s>
+                            <s>
+                                <figure>
+                                    <figDesc>Monogramma che riporta le lettere "E S C"</figDesc>
+                                </figure>
+                            </s>
+                            <s>
+                                Diritti riservati
+                            </s>
+                        </ab>
+                    </div>
+                    <div type="francobolli_timbri">
+                        <p>
+                            <stamp type="francobollo">
+                                <note>Francobollo da 5 centesimi delle Poste Italiane con il cameo del profilo di Vittorio Emanuele III.
+                                Il francobollo è leggermente coperto dall'inchiostro del timbro.</note>
+                            </stamp>
+                            <stamp type="timbro">
+                                <mentioned>
+                                    <term>MODE</term><unclear reason="illegibile"/>
+                                    <term>FERROVI</term><unclear reason="illegibile"/>
+                                </mentioned>
+                                <date>29-6-<unclear reason="illegibile"/></date>
+                                <note>Il timbro è parzialmente leggibile a causa di inchiostro totalmente scolorito.</note>
+                            </stamp>
+                        </p>
+                    </div>
+                </div>
+            </body>
+        </text>
+    </TEI>
+</teiCorpus>

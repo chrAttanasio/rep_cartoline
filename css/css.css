@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   /*border: 1px solid red;*/
+   font-family:'Roboto',sans-serif;
+}
+
+body {
+    background-color: #eee;
+}
+
+header{
+    margin-bottom: 50px;    
+    width: 100%;
+    box-shadow: 0px 4px 5px -2px rgba(0,0,0,0.5);
+    padding: 20px;
+    background-color: white;
+}
+header div{
+    width: 1170px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+section{
+    width: 100%;
+    max-width: 1250px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 25px;
+    margin-bottom: 50px;
+}
+
+.main{
+    flex-basis: 65%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.main__dati{
+    flex-basis: 40%;
+}
+
+.main__cartolina{
+    flex-basis: 55%;
+}
+
+.sidebar{
+    flex-basis: 30%;
+}
+
+.hide{
+    display: none;
+}
+
+.container-cartolina{
+    display: flex;
+    justify-content: space-between;
+    margin: auto 50px;
+    width: 100%;
+    max-width: 1250px;
+    border: 1px solid #333;
+}
+
+.container-cartolina__img{
+    flex-basis: 35%;
+}
+
+.container-cartolina__img img{
+    width: 100%;
+    object-fit: contain;
+}
+
+.container-cartolina__testo{
+    flex-basis: 65%;
+    padding: 15px;
+    padding-top: 0;
+}
+
+
+.cruscotto {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 3rem;
+    padding-bottom: 25px;
+}
+
+input[type="button"] {
+    display:inline-block;
+    padding:0.46em 1.6em;
+    border:0.1px solid #000000;
+    margin:0 0.2em 0.2em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-weight:300;
+    color:#333;
+    text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+    background-color:#42cc8c;;
+    text-align:center;
+    transition: all 0.15s;
+}
+input[type="button"]:hover {
+    text-shadow: 0 0 2em rgba(255,255,255,1);
+    color:#FFFFFF;
+    border-color:#FFFFFF;
+}
+
+.carousel-cell {
+    background-color: white;
+}
+
+h3 {
+    margin-top: 10px;
+}
+h1 {
+    margin-bottom: 15px;
+}
