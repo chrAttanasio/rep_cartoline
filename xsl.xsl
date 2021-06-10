@@ -25,8 +25,7 @@
                         Le cartoline sono state codificate da <xsl:value-of select="tei:teiCorpus/tei:teiHeader/tei:fileDesc/tei:editionStmt/tei:respStmt/tei:name[@xml:id='TC']"/>.
                         I funzionari scientifici sono <xsl:value-of select="tei:teiCorpus/tei:teiHeader/tei:fileDesc/tei:editionStmt/tei:respStmt/tei:name[@xml:id='GP']"/>
                         e <xsl:value-of select="tei:teiCorpus/tei:teiHeader/tei:fileDesc/tei:editionStmt/tei:respStmt/tei:name[@xml:id='ES']"/>.
-                        Il funzionario responsabile è <xsl:value-of select="tei:teiCorpus/tei:teiHeader/tei:fileDesc/tei:editionStmt/tei:respStmt/tei:name[@xml:id='ER']"/>
-                        </p>
+                        Il funzionario responsabile è <xsl:value-of select="tei:teiCorpus/tei:teiHeader/tei:fileDesc/tei:editionStmt/tei:respStmt/tei:name[@xml:id='ER']"/></p>
                     </div>
 				</header>   
                 <main class="container-flickity">
@@ -40,28 +39,15 @@
                             
                             <!--testo cartolina-->
                             <div class="container-cartolina__testo">
+                                <!--Stampa il titolo-->
                                 <xsl:apply-templates select="tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:bibl"/>
 
-                                <div class="container-cartolina__testo__fronte">
-                                    <xsl:apply-templates select="tei:text/tei:body/tei:div[@type='fronte']"/>
-                                </div>
-
-                                <div class="container-cartolina__testo__retro hide">
-                                    <!--Trascrizione blocco indirizzi-->
-                                    <xsl:apply-templates select="tei:text/tei:body/tei:div[@type='retro']/tei:div[@type='contenuto_trascrizione']"/>
-                                    <xsl:apply-templates select="tei:text/tei:body/tei:div[@type='retro']/tei:div[@type='contenuto_trascrizione']/tei:opener"/>
-                                    <xsl:apply-templates select="tei:text/tei:body/tei:div[@type='retro']/tei:div[@type='stampe_cartolina']"/>
-                                    <xsl:apply-templates select="tei:text/tei:body/tei:div[@type='retro']/tei:div[@type='francobolli_timbri']"/>
-                                    <xsl:apply-templates select="tei:text/tei:body/tei:div[@type='retro']/tei:div[@type='francobolli_timbri']/tei:p/tei:stamp[@type='timbro']"/>
-                                </div>
+                                <!-- Stampo i testi della cartolina -->
+                                <xsl:apply-templates select="tei:text"/>
 
                                 <div class="container-cartolina__testo__dati-tecnici hide">
-                                    <xsl:apply-templates select="tei:teiHeader/tei:fileDesc/tei:titleStmt"/>
-                                    <xsl:apply-templates select="tei:teiHeader/tei:fileDesc/tei:publicationStmt"/>
-                                    <xsl:apply-templates select="tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc"/>
-                                    <xsl:apply-templates select="tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc/tei:physDesc"/>
-                                    <xsl:apply-templates select="tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:listPerson"/>
-                                    <xsl:apply-templates select="tei:teiHeader/tei:profileDesc/tei:correspDesc"/>
+                                    <!--Stampa i dati tecnici-->
+                                    <xsl:apply-templates select="tei:teiHeader"/>
                                 </div>
 
                             </div>
@@ -83,6 +69,19 @@
     INIZIO TEMPLATES
     ___________________________________-->
 
+
+    <xsl:template match='tei:teiCorpus/tei:TEI/tei:text'>
+        <div class="container-cartolina__testo__fronte">
+            <!--Stampa il fronte-->
+            <xsl:apply-templates select="tei:body/tei:div[@type='fronte']"/>
+        </div>
+
+        <div class="container-cartolina__testo__retro hide">
+        <!--Stampa il retro-->
+            <xsl:apply-templates select="tei:body/tei:div[@type='retro']"/>
+        </div>
+    </xsl:template>
+
     <!-- Template TITOLI cartoline -->
     <xsl:template match='tei:teiCorpus/tei:TEI/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:bibl'>
         <xsl:for-each select="tei:title">
@@ -90,6 +89,50 @@
                 <xsl:value-of select="."/>
             </h1>
         </xsl:for-each>
+    </xsl:template>
+
+    <xsl:template match="tei:teiCorpus/tei:TEI/tei:text/tei:body/tei:div[@type='retro']">
+        <xsl:apply-templates select="tei:div[@type='contenuto_trascrizione']"/>
+        <xsl:apply-templates select="tei:div[@type='stampe_cartolina']"/>
+        <xsl:apply-templates select="tei:div[@type='francobolli_timbri']"/>
+    </xsl:template>
+
+    <!--Trascrizione blocco indirizzi-->
+    <xsl:template match="//tei:div[@type='contenuto_trascrizione']">
+        <div class="container-cartolina__testo__retro__blocco-dx">
+            <h3>Trascrizione blocco indirizzi</h3>
+            <xsl:for-each select="tei:ab[@type='blocco-destro']">
+                <xsl:apply-templates />
+            </xsl:for-each>
+        </div>
+        <xsl:apply-templates select="tei:opener"/>
+    </xsl:template>
+
+    <!--Trascrizione delle stampe a inchiostro sul retro della cartolina -->
+    <xsl:template match="//tei:div[@type='stampe_cartolina']">
+        <div>
+            <h3>Stampe sulla cartolina:</h3>
+            <xsl:for-each select="tei:ab/tei:s">
+                <p class="container-cartolina__testo__retro">
+                    <xsl:value-of select="."/>
+                </p >
+            </xsl:for-each>
+        </div>
+    </xsl:template>
+
+  <!--Trascrizione dei francobolli posti sul retro delle cartoline -->
+    <xsl:template match="//tei:div[@type='francobolli_timbri']">
+         <div>
+            <xsl:for-each select="tei:p/tei:stamp[@type='francobollo']">
+                <h3>Francobollo</h3>
+                <xsl:for-each select="tei:note">
+                    <p class="container-cartolina__testo__retro">
+                        <xsl:value-of select="."/>
+                    </p>
+                </xsl:for-each>
+            </xsl:for-each>
+        </div>
+        <xsl:apply-templates select="tei:p/tei:stamp[@type='timbro']"/>
     </xsl:template>
 
     <!-- Template che prende il testo del fronte delle cartoline-->
@@ -132,86 +175,38 @@
         <xsl:apply-templates select="tei:head"/>
     </xsl:template>
 
-    <!--Trascrizione blocco indirizzi-->
-    <xsl:template match="tei:teiCorpus/tei:TEI/tei:text/tei:body/tei:div[@type='retro']/tei:div[@type='contenuto_trascrizione']">
-        <div class="container-cartolina__testo__retro__blocco-dx">
-            <h3>Trascrizione blocco indirizzi</h3>
-            <xsl:for-each select="tei:ab[@type='blocco-destro']">
-                <xsl:apply-templates />
-            </xsl:for-each>
-        </div>
-    </xsl:template>
-
-    <!--Trascrizione corpo cartolina-->
-    <xsl:template match="tei:teiCorpus/tei:TEI/tei:text/tei:body/tei:div[@type='retro']/tei:div[@type='contenuto_trascrizione']/tei:opener">
-        <h3>Trascrizione corpo cartolina</h3>
-        <p class="container-cartolina__testo__retro"><xsl:apply-templates /></p>
-        <p><xsl:apply-templates select="../tei:p" /></p>
-        <p><xsl:value-of select="../tei:closer/tei:signed"/></p>
-    </xsl:template>
-
-    <!--Trascrizione delle stampe a inchiostro sul retro della cartolina -->
-    <xsl:template match="tei:teiCorpus/tei:TEI/tei:text/tei:body/tei:div[@type='retro']/tei:div[@type='stampe_cartolina']">
-        <div>
-            <h3>Stampe sulla cartolina:</h3>
-            <xsl:for-each select="tei:ab/tei:s">
-                <p class="container-cartolina__testo__retro">
-                    <xsl:value-of select="."/>
-                </p >
-            </xsl:for-each>
-        </div>
-    </xsl:template>
 
 
-    <!--Trascrizione dei francobolli posti sul retro delle cartoline -->
-    <xsl:template match="tei:teiCorpus/tei:TEI/tei:text/tei:body/tei:div[@type='retro']/tei:div[@type='francobolli_timbri']">
-         <div>
-            <xsl:for-each select="tei:p/tei:stamp[@type='francobollo']">
-                <h3>Francobollo</h3>
-                <xsl:for-each select="tei:note">
-                    <p class="container-cartolina__testo__retro">
-                        <xsl:value-of select="."/>
-                    </p>
-                </xsl:for-each>
-            </xsl:for-each>
-        </div>
-    </xsl:template>
 
-    <!--Trascrizione dei timbri posti sul retro della cartolina -->
-    <xsl:template match="tei:teiCorpus/tei:TEI/tei:text/tei:body/tei:div[@type='retro']/tei:div[@type='francobolli_timbri']/tei:p/tei:stamp[@type='timbro']">
-        <div>
-            <xsl:for-each select=".">
-                <h3>Timbro</h3>
-                <p class="container-cartolina__testo__retro">
-                    <xsl:apply-templates select="tei:mentioned"/>
-                </p>
-                <p class="container-cartolina__testo__retro">
-                    <xsl:apply-templates select="tei:date"/>
-                </p>
-                <p class="container-cartolina__testo__retro">
-                    <xsl:apply-templates select="tei:note"/>
-                </p>
-            </xsl:for-each>
-        </div>
-    </xsl:template>
 
 
     <!--Trascrizione delle informazioni di title statement di ogni cartolina (nome dei compilatori ed ente di appartenenza)-->
-    <xsl:template match="tei:teiCorpus/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt">
+    <xsl:template match="tei:teiCorpus/tei:TEI/tei:teiHeader">
+        <xsl:apply-templates select="tei:fileDesc"/>
+        <xsl:apply-templates select="tei:profileDesc/tei:correspDesc"/>
+    </xsl:template>
+
+    <xsl:template match="//tei:fileDesc">
+        <xsl:apply-templates select="tei:titleStmt"/>
+        <xsl:apply-templates select="tei:publicationStmt"/>
+        <xsl:apply-templates select="tei:sourceDesc"/>
+    </xsl:template>
+
+    <xsl:template match="//tei:fileDesc/tei:titleStmt">
         <div>
             <xsl:for-each select="tei:respStmt">
                 <strong><xsl:value-of select="tei:resp"/></strong>
                 <xsl:for-each select="tei:name/@ref">
-                    <xsl:for-each select="key('name', .)">
+                    <xsl:for-each select="key('name', substring(., 2))">
                         <p><xsl:value-of select="."/></p>
                     </xsl:for-each>
                 </xsl:for-each>
             </xsl:for-each>
         </div>
     </xsl:template>
-
+ 
     <!--Trascrizione dei dati tecnici di ogni cartolina, contenuti in publication statement -->
-    <xsl:template match="tei:teiCorpus/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt">
+    <xsl:template match="//tei:publicationStmt">
         <div>
             <p>
                 <strong>Luogo:</strong>
@@ -228,14 +223,20 @@
         </div>
     </xsl:template>
 
-    <xsl:template match="tei:teiCorpus/tei:TEI/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc">
+    <xsl:template match="//tei:sourceDesc">
+        <xsl:apply-templates select="tei:msDesc"/>
+        <xsl:apply-templates select="tei:listPerson"/>
+    </xsl:template>
+
+    <xsl:template match="//tei:msDesc">
         <div>
             <xsl:apply-templates select="tei:msIdentifier"/>
             <xsl:apply-templates select="tei:msContents"/>
         </div>
+        <xsl:apply-templates select="tei:physDesc"/>
     </xsl:template>
 
-    <xsl:template match="tei:teiCorpus/tei:TEI/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc/tei:physDesc">
+    <xsl:template match="//tei:physDesc">
         <div>
             <xsl:apply-templates select="tei:objectDesc/tei:supportDesc"/>
             <xsl:apply-templates select="tei:handDesc"/>
@@ -243,7 +244,7 @@
         </div>
     </xsl:template>
 
-    <xsl:template match="tei:teiCorpus/tei:TEI/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:listPerson">
+    <xsl:template match="//tei:listPerson">
         <div>
             <h3>Persone coinvolte</h3>
             <xsl:for-each select="tei:person">
@@ -261,12 +262,16 @@
         </div>
     </xsl:template>
 
-    <xsl:template match="tei:teiCorpus/tei:TEI/tei:teiHeader/tei:profileDesc/tei:correspDesc">
+
+
+    
+
+    <xsl:template match="//tei:profileDesc/tei:correspDesc">
         <div>
             <p>
             <strong>Inviato da:</strong>
                 <xsl:for-each select="tei:correspAction[@type='Inviata']/tei:persName/@ref">                    
-                    <xsl:for-each select="key('pers_name', .)">
+                    <xsl:for-each select="key('pers_name', substring(., 2))">
                         <xsl:value-of select="tei:persName"/>
                     </xsl:for-each>
                 </xsl:for-each>
@@ -277,7 +282,7 @@
             <p>
                 <strong>Ricevuto da:</strong>
                 <xsl:for-each select="tei:correspAction[@type='Ricevuta']/tei:persName/@ref">                    
-                    <xsl:for-each select="key('pers_name', .)">
+                    <xsl:for-each select="key('pers_name', substring(. , 2))">
                             <xsl:value-of select="tei:persName"/>
                     </xsl:for-each>
                 </xsl:for-each>
@@ -285,24 +290,39 @@
         </div>
     </xsl:template>
 
-
-<!--
-        <profileDesc>
-            <correspDesc>
-                <correspAction type="Inviata">
-                    <persName ref="#Giovanni"/>
-                </correspAction>
-                <correspAction type="Ricevuta">
-                    <persName ref="#OT"/>
-                </correspAction>
-            </correspDesc>
-            <langUsage>
-                <language ident="it-IT">Italiano del Novecento</language>
-            </langUsage>
-        </profileDesc>
--->
-
     <!-- Template secondari-->
+
+    <!--Trascrizione dei timbri posti sul retro della cartolina -->
+    <xsl:template match="//tei:p/tei:stamp[@type='timbro']">
+        <div>
+            <xsl:for-each select=".">
+                <h3>Timbro</h3>
+                <p class="container-cartolina__testo__retro">
+                    <xsl:apply-templates select="tei:mentioned"/>
+                </p>
+                <p class="container-cartolina__testo__retro">
+                    <xsl:apply-templates select="tei:date"/>
+                </p>
+                <p class="container-cartolina__testo__retro">
+                    <xsl:apply-templates select="tei:note"/>
+                </p>
+            </xsl:for-each>
+        </div>
+    </xsl:template>
+
+    <!--Trascrizione corpo cartolina-->
+    <xsl:template match="//tei:opener">
+        <h3>Trascrizione corpo cartolina</h3>
+        <p class="container-cartolina__testo__retro">
+            <xsl:apply-templates />
+        </p>
+        <p>
+            <xsl:apply-templates select="../tei:p" />
+        </p>
+        <p>
+            <xsl:value-of select="../tei:closer/tei:signed"/>
+        </p>
+    </xsl:template>
 
     <!-- Template che prende l'immagine del fronte delle cartoline-->
     <xsl:template match='//tei:surface[1]'>
@@ -327,8 +347,12 @@
     </xsl:template>
 
     <xsl:template match="//tei:address">
-        <p><xsl:apply-templates select="tei:persName"/></p>
-        <p><xsl:apply-templates select="tei:addrLine"/></p>
+        <p>
+            <xsl:apply-templates select="tei:persName"/>
+        </p>
+        <p>
+            <xsl:apply-templates select="tei:addrLine"/>
+        </p>
     </xsl:template>
 
     <xsl:template match="//tei:dateLine">
@@ -344,7 +368,7 @@
     <xsl:template match="//tei:date">
        Data: 
        <xsl:value-of select="."/>
-       <xsl:if test="//tei:date = ''">
+       <xsl:if test="//tei:date/tei:unclear">
             &lt;<i>Illegibile</i>&gt;
        </xsl:if>
     </xsl:template>
@@ -388,11 +412,9 @@
         </div>
     </xsl:template>
     
-    <xsl:template match="//tei:support/tei:dimensions">
+    <xsl:template match="//tei:dimensions">
         <p>
-            <strong>Dimensioni:</strong><xsl:value-of select="concat(' ', tei:width, @unit)"/>
-            x
-            <xsl:value-of select="concat(' ', tei:height, @unit)"/>
+            <strong>Dimensioni:</strong><xsl:value-of select="concat(' ', tei:width, @unit, ' x ', tei:height, @unit)"/>
             </p>
     </xsl:template>
 
