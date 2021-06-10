@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE teiCorpus SYSTEM "tei_all.dtd">
-<?xml-stylesheet type="text/xsl" href="style.xsl"?>
-<?xml-stylesheet type="text/css" href="stile.css"?>
+<?xml-stylesheet type="text/xsl" href="#style.xsl"?>
+<?xml-stylesheet type="text/css" href="#stile.css"?>
 
 <teiCorpus version="3.3.0" xmlns="http://www.tei-c.org/ns/1.0">
     <!-- HEADER DEL CORPUS -->
@@ -29,8 +29,8 @@
                 </edition>
                 <respStmt>
                     <resp>Encoding by:</resp>
-                    <name ref="MF"/>
-                    <name ref="CA"/>
+                    <name ref="#MF"/>
+                    <name ref="#CA"/>
                 </respStmt>
                 <respStmt>
                     <resp>Compilatore:</resp>
@@ -83,13 +83,13 @@
 
                     <respStmt>
                         <resp>Encoding by:</resp>
-                        <name ref="MF"/>
-                        <name ref="CA"/>
+                        <name ref="#MF"/>
+                        <name ref="#CA"/>
                     </respStmt>
 
                     <respStmt>
                         <resp>Ente di Appartenenza:</resp>
-                        <name type="comune" ref="SP">Comune della Spezia</name>
+                        <name type="comune" ref="#SP">Comune della Spezia</name>
                     </respStmt>
                 </titleStmt>
 
@@ -100,21 +100,21 @@
                     </edition>
                     <respStmt>
                         <resp>Encoding by:</resp>
-                        <name ref="MF"/>
-                        <name ref="CA"/>
+                        <name ref="#MF"/>
+                        <name ref="#CA"/>
                     </respStmt>
                     <respStmt>
                         <resp>Compilatore:</resp>
-                        <name ref="TC">Tommaso Castagneto</name>
+                        <name ref="#TC"/>
                     </respStmt>
                     <respStmt>
                         <resp>Responsabile scientifico:</resp>
-                        <name ref="GP">G. Paolicchi</name>
-                        <name ref="ES">E. Salvatori</name>
+                        <name ref="#GP"/>
+                        <name ref="#ES"/>
                     </respStmt>
                     <respStmt>
                         <resp>Funzionario responsabile</resp>
-                        <name ref="ER">E. Ratti</name>
+                        <name ref="#ER"/>
                     </respStmt>
                 </editionStmt>
 
@@ -194,10 +194,10 @@
             <profileDesc>
                 <correspDesc>
                     <correspAction type="Inviata">
-                        <persName ref="Giovanni"/>
+                        <persName ref="#Giovanni"/>
                     </correspAction>
                     <correspAction type="Ricevuta">
-                        <persName ref="OT"/>
+                        <persName ref="#OT"/>
                     </correspAction>
                 </correspDesc>
                 <langUsage>
@@ -285,7 +285,9 @@
                                     <term>MOD</term><unclear reason="illegibile"/>
                                     <term>FERRO</term><unclear reason="illegibile"/>
                                 </mentioned>
-                                <date><unclear reason="illegibile"/></date>
+                                <date>
+                                    <unclear reason="illegibile"/>
+                                </date>
                                 <note>Il timbro è parzialmente leggibile in quanto è stato apposto oltre i bordi della cartolina.</note>
                             </stamp>
                         </p>
@@ -305,13 +307,13 @@
 
                     <respStmt>
                         <resp>Trascrizione a cura di:</resp>
-                        <name ref="MF"/>
-                        <name ref="CA"/>
+                        <name ref="#MF"/>
+                        <name ref="#CA"/>
                     </respStmt>
 
                     <respStmt>
                         <resp>Ente di Appartenenza:</resp>
-                        <name type="comune" ref="SP">Comune della Spezia</name>
+                        <name type="comune" ref="#SP">Comune della Spezia</name>
                     </respStmt>
                 </titleStmt>
 
@@ -322,21 +324,21 @@
                     </edition>
                     <respStmt>
                         <resp>Encoding by:</resp>
-                        <name ref="MF"/>
-                        <name ref="CA"/>
+                        <name ref="#MF"/>
+                        <name ref="#CA"/>
                     </respStmt>
                     <respStmt>
                         <resp>Compilatore:</resp>
-                        <name ref="TC">Tommaso Castagneto</name>
+                        <name ref="#TC"/>
                     </respStmt>
                     <respStmt>
                         <resp>Responsabile scientifico:</resp>
-                        <name ref="GP">G. Paolicchi</name>
-                        <name ref="ES">E. Salvatori</name>
+                        <name ref="#GP"/>
+                        <name ref="#ES"/>
                     </respStmt>
                     <respStmt>
                         <resp>Funzionario responsabile</resp>
-                        <name ref="ER">E. Ratti</name>
+                        <name ref="#ER"/>
                     </respStmt>
                 </editionStmt>
 
@@ -416,10 +418,10 @@
             <profileDesc>
                 <correspDesc>
                     <correspAction type="Inviata">
-                        <persName ref="Giovanni"/>
+                        <persName ref="#Giovanni"/>
                     </correspAction>
                     <correspAction type="Ricevuta">
-                        <persName ref="OT"/>
+                        <persName ref="#OT"/>
                     </correspAction>
                 </correspDesc>
                 <langUsage>
@@ -433,7 +435,7 @@
                 <surface type="fronte_cartolina">
                     <graphic url="img/7694-183F.jpg"/>
                 </surface>
-                <surface xml:id="facsimile-cartolina-183r">
+                <surface>
                     <graphic url="img/7694-183R.jpg"/>
                 </surface>
             </surfaceGrp>
@@ -454,7 +456,6 @@
 
                 <div type="retro">
                     <div type="contenuto_trascrizione">
-                        <pb/>
                         <!-- CORPO DELLA LETTERA -->
                         <opener>
                             <dateline>Modena, 10/12-17</dateline>
@@ -503,7 +504,9 @@
                                 <mentioned>
                                     <unclear reason="illegibile"/>
                                 </mentioned>
-                                <date><unclear reason="illegibile"/></date>
+                                <date>
+                                    <unclear reason="illegibile"/>
+                                </date>
                                 <note>Il timbro è quasi totalmente illeggibile a causa di pesanti sbavature dell'inchiostro.</note>
                             </stamp>
                         </p>
@@ -522,12 +525,12 @@
                     <title>Angelo dall'oca bianca: Piazza delle erbe a Verona</title>
                     <respStmt>
                         <resp>Trascrizione a cura di:</resp>
-                        <name ref="MF"/>
-                        <name ref="CA"/>
+                        <name ref="#MF"/>
+                        <name ref="#CA"/>
                     </respStmt>
                     <respStmt>
                         <resp>Ente di Appartenenza:</resp>
-                        <name type="comune" ref="SP">Comune della Spezia</name>
+                        <name type="comune" ref="#SP">Comune della Spezia</name>
                     </respStmt>
                 </titleStmt>
                 <editionStmt>
@@ -537,21 +540,21 @@
                     </edition>
                     <respStmt>
                         <resp>Encoding by:</resp>
-                        <name ref="MF"/>
-                        <name ref="CA"/>
+                        <name ref="#MF"/>
+                        <name ref="#CA"/>
                     </respStmt>
                     <respStmt>
                         <resp>Compilatore:</resp>
-                        <name ref="TC">Tommaso Castagneto</name>
+                        <name ref="#TC"/>
                     </respStmt>
                     <respStmt>
                         <resp>Responsabile scientifico:</resp>
-                        <name ref="GP">G. Paolicchi</name>
-                        <name ref="ES">E. Salvatori</name>
+                        <name ref="#GP"/>
+                        <name ref="#ES"/>
                     </respStmt>
                     <respStmt>
                         <resp>Funzionario responsabile</resp>
-                        <name ref="ER">E. Ratti</name>
+                        <name ref="#ER"/>
                     </respStmt>
                 </editionStmt>
                 <publicationStmt>
@@ -636,10 +639,10 @@
             <profileDesc>
                 <correspDesc>
                     <correspAction type="Inviata">
-                        <persName ref="Giovanni"/>
+                        <persName ref="#Giovanni"/>
                     </correspAction>
                     <correspAction type="Ricevuta">
-                        <persName ref="OT"/>
+                        <persName ref="#OT"/>
                     </correspAction>
                 </correspDesc>
                 <langUsage>
@@ -672,7 +675,6 @@
                 </div>
                 <div type="retro">
                     <div type="contenuto_trascrizione">
-                        <pb/>
                         <!-- CORPO DELLA LETTERA -->
                         <opener>
                             <dateline>Modena, 30/6-1917</dateline>
