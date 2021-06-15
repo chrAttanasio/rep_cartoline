@@ -2377,7 +2377,7 @@ when %teidata.temporal.w3c;  #IMPLIED >
 <!ATTLIST docTitle
  %tei_att.global.attributes;
  %tei_att.canonical.attributes; >
-<!--doc:(ambito di uso) descrive il più importantecontesto sociale nel quale il testo è stato realizzato, ad esempio privato o pubblico, scolastico, religioso, ecc. [15.2.1. The Text Description] -->
+<!--doc:(ambito di uso) descrive il più importante contesto sociale nel quale il testo è stato realizzato, ad esempio privato o pubblico, scolastico, religioso, ecc. [15.2.1. The Text Description] -->
 <!ELEMENT domain %macro.phraseSeq.limited;>
 <!ATTLIST domain xmlns CDATA "http://www.tei-c.org/ns/1.0">
 <!ATTLIST domain

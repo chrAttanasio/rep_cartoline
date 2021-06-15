@@ -281,12 +281,12 @@
                                 <note type='stato'>Il francobollo è parzialmente coperto dall'inchiostro del timbro.</note>
                             </stamp>
                             <stamp type="timbro">
-                                <mentioned>
-                                    <term>MOD</term><unclear reason="illegibile"/>
-                                    <term>FERRO</term><unclear reason="illegibile"/>
-                                </mentioned>
+                                <seg>
+                                    <w>MOD</w><unclear reason="illegibile" agent="ink"/>
+                                    <w>FERRO</w><unclear reason="illegibile" agent="ink"/>
+                                </seg>
                                 <date>
-                                    <unclear reason="illegibile"/>
+                                    <unclear reason="illegibile" agent="ink"/>
                                 </date>
                                 <note>Il timbro è parzialmente leggibile in quanto è stato apposto oltre i bordi della cartolina.</note>
                             </stamp>
@@ -501,11 +501,11 @@
                                 Il francobollo è per la maggior parte coperto dall'inchiostro del timbro.</note>
                             </stamp>
                             <stamp type="timbro">
-                                <mentioned>
-                                    <unclear reason="illegibile"/>
-                                </mentioned>
+                                <seg>
+                                    <unclear reason="illegibile" agent="ink"/>
+                                </seg>
                                 <date>
-                                    <unclear reason="illegibile"/>
+                                    <unclear reason="illegibile" agent="ink"/>
                                 </date>
                                 <note>Il timbro è quasi totalmente illeggibile a causa di pesanti sbavature dell'inchiostro.</note>
                             </stamp>
@@ -730,11 +730,11 @@
                                 Il francobollo è leggermente coperto dall'inchiostro del timbro.</note>
                             </stamp>
                             <stamp type="timbro">
-                                <mentioned>
-                                    <term>MODE</term><unclear reason="illegibile"/>
-                                    <term>FERROVI</term><unclear reason="illegibile"/>
-                                </mentioned>
-                                <date>29-6-<unclear reason="illegibile"/></date>
+                                <seg>
+                                    <w>MODE</w><unclear reason="illegibile" agent="ink"/>
+                                    <w>FERROVI</w><unclear reason="illegibile" agent="ink"/>
+                                </seg>
+                                <date>29-6-<unclear reason="illegibile" agent="ink"/></date>
                                 <note>Il timbro è parzialmente leggibile a causa di inchiostro totalmente scolorito.</note>
                             </stamp>
                         </p>

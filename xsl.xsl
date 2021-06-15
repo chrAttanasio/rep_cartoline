@@ -298,7 +298,7 @@
             <xsl:for-each select=".">
                 <h3>Timbro</h3>
                 <p class="container-cartolina__testo__retro">
-                    <xsl:apply-templates select="tei:mentioned"/>
+                    <xsl:apply-templates select="tei:seg"/>
                 </p>
                 <p class="container-cartolina__testo__retro">
                     <xsl:apply-templates select="tei:date"/>
@@ -373,13 +373,13 @@
        </xsl:if>
     </xsl:template>
     
-    <xsl:template match="//tei:mentioned">
+    <xsl:template match="//tei:seg">
        Testo: 
-        <xsl:if test="not(tei:term)">
+        <xsl:if test="not(tei:w)">
             &lt;<i>Illegibile</i>&gt;
         </xsl:if>
-       <xsl:for-each select='tei:term'>
-        <xsl:value-of select="."/>
+       <xsl:for-each select='tei:w'>
+            <xsl:value-of select="."/>
             <xsl:if test="//tei:unclear = ''">
                 &lt;<i>Illegibile</i>&gt;
             </xsl:if>
